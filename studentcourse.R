@@ -132,7 +132,7 @@ dbGetQuery(studentcourse,
 # Now let's consider another example involving joining tables. First let's do it in R by fetching each table first and then using dplyr:
 
 students <- dbGetQuery(studentcourse, 
-           "SELECT * FROM student;")
+           "SELECT * FROM students;")
 
 studentemp <- dbGetQuery(studentcourse, 
            "SELECT * FROM studentemp;")
@@ -147,7 +147,7 @@ dbGetQuery(studentcourse,
 
 # It's ultimately up to you to decide if operations should be run in SQL or in R. Regardless of how you do it however, you can use the results within R to extend the possibilities:
 
-fourTableJoin <-dbGetQuery(studentcourse, 
+fourTableJoin <- dbGetQuery(studentcourse, 
            "SELECT * FROM student NATURAL JOIN major NATURAL JOIN takes NATURAL JOIN course;")
 
 fourTableJoin$studentid <- factor(fourTableJoin$studentid)
