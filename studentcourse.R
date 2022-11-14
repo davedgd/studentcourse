@@ -131,13 +131,14 @@ dbGetQuery(studentcourse,
 
 # Now let's consider another example involving joining tables. First let's do it in R by fetching each table first and then using dplyr:
 
-student <- dbGetQuery(studentcourse, 
+students <- dbGetQuery(studentcourse, 
            "SELECT * FROM student;")
 
 studentemp <- dbGetQuery(studentcourse, 
            "SELECT * FROM studentemp;")
 
-student %>% left_join(studentemp, by = c("studentid" = "studentident"))
+students %>% 
+  left_join(studentemp, by = c("studentid" = "studentident"))
 
 # Note this is essentially the same result as doing it directly with SQL (except SQL returns both the studentid and studentident columns in the result):
 
