@@ -6,6 +6,8 @@
 
 # pip install mysql-connector colorama pandas
 
+# Alternatively, in conda/mamba, see: mysql-connector-python
+
 # Next, run this script via python:
 
 # python studentcourse.py
