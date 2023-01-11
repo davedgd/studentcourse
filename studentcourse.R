@@ -117,7 +117,7 @@ dbGetQuery(studentcourse,
 # Similarly, let's recreate an example involving the SQL keyword IN using R (using R's %in% operator):
 
 course <- dbGetQuery(studentcourse, 
-                    "SELECT * FROM course;")
+           "SELECT * FROM course;")
 
 course %>% 
   filter(topic %in% c("Global", "RDBMS")) %>% 
