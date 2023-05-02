@@ -137,7 +137,7 @@ SELECT * FROM student NATURAL JOIN major;
 CREATE TABLE engmajor (
 	major VARCHAR(255),
 	school VARCHAR(255),
-	CONSTRAINT PK_major PRIMARY KEY (major)
+	CONSTRAINT PK_engmajor PRIMARY KEY (major)
 	);
     
 INSERT INTO engmajor (major, school) VALUES ('CS', 'Engineering');
@@ -178,7 +178,7 @@ SELECT * FROM students RIGHT JOIN studentemp ON studentid = studentident;
 
 -- Note that the following is not available in MySQL:
 
--- SELECT * FROM students FULL JOIN studentemp ON studentid = studentident;
+SELECT * FROM students FULL JOIN studentemp ON studentid = studentident;
 
 -- But it can be simulated using UNION ALL:
 
@@ -213,8 +213,6 @@ SELECT * FROM morestudent;
 
 -- Note that the following are not available in MySQL:
 
-/*
-
 SELECT * FROM student
 EXCEPT
 SELECT * FROM morestudent;
@@ -226,8 +224,6 @@ SELECT * FROM student;
 SELECT * FROM student
 INTERSECT
 SELECT * FROM morestudent;
-
-*/
 
 -- But they can be simulated in various ways.
 
