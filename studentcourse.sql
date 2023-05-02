@@ -6,7 +6,7 @@ DROP DATABASE IF EXISTS studentcourse; -- Note the addition of IF EXISTS (see Ad
 
 CREATE DATABASE studentcourse;
 
-USE studentcourse;
+-- USE studentcourse; -- Only run if needed (e.g., MySQL)
 
 CREATE TABLE major (
 	major VARCHAR(255),
@@ -45,6 +45,11 @@ CREATE TABLE takes (
 -- Note. The following commands are commented out and thus not run:
 
 /*
+-- PostgreSQL
+ALTER TABLE course ALTER COLUMN courseid TYPE VARCHAR(255); -- Note this will not run due to foreign key constraints
+ALTER TABLE student ALTER COLUMN year TYPE INT; -- This would work however
+
+-- MySQL
 ALTER TABLE course MODIFY COLUMN courseid VARCHAR(255); -- Note this will not run due to foreign key constraints
 ALTER TABLE student MODIFY COLUMN year VARCHAR(255); -- This would work however
 
