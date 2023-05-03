@@ -47,7 +47,7 @@ CREATE TABLE takes (
 /*
 -- PostgreSQL
 ALTER TABLE course ALTER COLUMN courseid TYPE VARCHAR(255); -- Note this will not run due to foreign key constraints
-ALTER TABLE student ALTER COLUMN year TYPE INT; -- This would work however
+ALTER TABLE student ALTER COLUMN year TYPE VARCHAR(255); -- This would work however
 
 -- MySQL
 ALTER TABLE course MODIFY COLUMN courseid VARCHAR(255); -- Note this will not run due to foreign key constraints
