@@ -6,7 +6,7 @@
 
 # pip install mysql-connector colorama pandas
 
-# Alternatively, in conda/mamba, see: mysql-connector-python
+# Alternatively, in conda/mamba, see: mysql-connector-python (use 8.4.0 or older with Python 3.12 for password authentication)
 
 # Next, run this script via python:
 
@@ -90,3 +90,4 @@ PrintQueryResult(cursor.fetchall())
 # ------------------
 
 db.close()
+
